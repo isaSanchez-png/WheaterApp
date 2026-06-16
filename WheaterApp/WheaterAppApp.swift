@@ -1,0 +1,17 @@
+//
+//  WheaterAppApp.swift
+//  WheaterApp
+//
+//  Created by Isa on 15/06/26.
+//
+
+import SwiftUI
+
+@main
+struct WheaterAppApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
