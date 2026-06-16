@@ -11,7 +11,7 @@ import SwiftUI
 struct WheaterAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WeatherSearcher()
         }
     }
 }
