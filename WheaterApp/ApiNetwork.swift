@@ -11,6 +11,12 @@ class ApiNetwork {
         let name: String
         let weather: [Weather]
         let main: MainWeather
+        let sys: SysWeather
+        let dt: Int
+        
+        var realHour: Date {
+            return Date(timeIntervalSince1970: Double(dt))
+        }
         
         var mainDescription: Weather? {
             return weather.first
@@ -29,12 +35,22 @@ class ApiNetwork {
         let temp: Float
         let tempMin: Float
         let tempMax: Float
+        let pressure: Int
+        let humidity: Int
         
         enum CodingKeys: String, CodingKey {
             case temp = "temp"
             case tempMin = "temp_min"
             case tempMax = "temp_max"
+            case pressure  = "pressure"
+            case humidity = "humidity"
         }
+    }
+    
+    struct SysWeather: Codable {
+        let country: String
+        let sunrise: Int
+        let sunset: Int
     }
     
     func getWheaterByCity(nameCity: String) async throws -> WeatherComplete {
