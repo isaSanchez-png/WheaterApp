@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct WheaterAppApp: App {
+struct WheaterApp: App {
     var body: some Scene {
         WindowGroup {
             WeatherSearcher()
