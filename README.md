@@ -37,7 +37,7 @@ Para ejecutar estos proyectos localmente:
 # **WheaterApp**
 A modern and elegant weather forecasting mobile application, built natively for iOS using SwiftUI, CoreLocation, and the OpenWeatherMap API. The app enables users to search for real-time weather conditions by city name, track their current location instantly via GPS, and manage a persistent list of favorite locations.
 
-##**Key Features**
+## **Key Features**
 - Current Location Weather: Real-time automatic geolocating using CoreLocation combined with responsive network synchronization.
 - Dynamic Search: Quick text-based search engine to look up weather data for any global city.
 - Persistent Favorites List: On-device local storage powered by UserDefaults, optimized with property observers (didSet) to prevent duplicate records and ensure data consistency.
@@ -46,7 +46,7 @@ A modern and elegant weather forecasting mobile application, built natively for 
                                                                                     
 ---
 
-##Tech Stack & Frameworks
+## Tech Stack & Frameworks
 - Language: Swift 5.10
 - UI Framework: SwiftUI
 - Native Frameworks: CoreLocation (GPS), Combine (Reactive data bindings)
