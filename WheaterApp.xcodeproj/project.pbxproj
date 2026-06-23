@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4AD4BD5A2FEB3B5700165080 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4AD4BD592FEB3B4500165080 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4AA8683F2FE0E4BF0089F812 /* WheaterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheaterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AD4BD592FEB3B4500165080 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -34,6 +39,7 @@
 			children = (
 				4AA868412FE0E4BF0089F812 /* WheaterApp */,
 				4AA868402FE0E4BF0089F812 /* Products */,
+				4AD4BD592FEB3B4500165080 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD4BD5A2FEB3B5700165080 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

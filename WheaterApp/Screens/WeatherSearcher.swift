@@ -10,7 +10,7 @@ import SwiftUI
 struct WeatherSearcher: View {
     @State var cityName: String = ""
     @State var wrapper: ApiNetwork.WeatherComplete? = nil
-    @State var favoriteCities: [String] = []
+    @StateObject var store = WeatherStore()
     @State var showButtonsSheet: Bool = true
     @StateObject var gps = GPSManager()
     @State private var activeSheetCity: selectedCityIdentifiable? = nil
@@ -42,7 +42,7 @@ struct WeatherSearcher: View {
                             .cornerRadius(16)
                     }
                     
-                    ForEach(favoriteCities, id: \.self) { city in
+                    ForEach(store.favoriteCities, id: \.self) { city in
                         CityWeatherCard(cityName: city)
                             .onTapGesture {
                                 activeSheetCity = selectedCityIdentifiable(name: city)
@@ -114,8 +114,8 @@ struct WeatherSearcher: View {
                         Button(action: {
                             let cleanedSearch = cityName.trimmingCharacters(in: .whitespacesAndNewlines)
                             if !cleanedSearch.isEmpty {
-                                if !favoriteCities.contains(where: { $0.description.lowercased() == cleanedSearch.lowercased()}){
-                                    favoriteCities.insert(cleanedSearch, at: 0)
+                                if !store.favoriteCities.contains(where: { $0.description.lowercased() == cleanedSearch.lowercased()}){
+                                    store.favoriteCities.insert(cleanedSearch, at: 0)
                                 }
                             }
                             withAnimation {
